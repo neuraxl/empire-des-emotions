@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://neuraxl.github.io/empire-des-emotions/sitemap.xml

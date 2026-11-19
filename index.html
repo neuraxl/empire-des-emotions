@@ -13,6 +13,22 @@
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="720">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService",
+ "name":"L'Empire des émotions — Roger Savard (Sav'art)",
+ "url":"https://neuraxl.github.io/empire-des-emotions/",
+ "email":"savardrjr@gmail.com",
+ "description":"Capsules vidéo émotionnelles, séries et jingles pour les commerces du Québec. Spécialité : garages et commerces de services.",
+ "areaServed":"Québec, Canada",
+ "founder":{"@type":"Person","name":"Roger Savard"},
+ "makesOffer":[
+  {"@type":"Offer","name":"Capsule émotionnelle","price":"250","priceCurrency":"CAD"},
+  {"@type":"Offer","name":"Série découverte","price":"750","priceCurrency":"CAD"},
+  {"@type":"Offer","name":"Forfait mensuel","price":"500","priceCurrency":"CAD"},
+  {"@type":"Offer","name":"Forfait mensuel Plus","price":"950","priceCurrency":"CAD"},
+  {"@type":"Offer","name":"Jingle original","price":"350","priceCurrency":"CAD"},
+  {"@type":"Offer","name":"Identité visuelle de base","price":"300","priceCurrency":"CAD"}]}
+</script>
 <style>
 :root{
   --ink:#171310; --ink2:#221c16; --gold:#c9973f; --gold2:#e8c37a;
@@ -74,6 +90,15 @@ h2+.intro{color:var(--muted);max-width:720px;margin-bottom:26px}
 .note{color:var(--muted);font-size:.9rem;margin-top:18px}
 footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--muted);font-size:.92rem}
 footer .sig{color:var(--gold2);font-style:italic}
+form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;max-width:640px;margin:26px auto 0;text-align:left}
+form label{display:block;color:var(--muted);font-size:.9rem;margin:12px 0 4px}
+form input,form select,form textarea{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:8px;
+  color:var(--cream);padding:10px 12px;font-size:1rem;font-family:Helvetica,Arial,sans-serif}
+form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--gold)}
+form button{margin-top:18px;width:100%;background:var(--gold);color:#171310;font-weight:bold;border:none;
+  padding:13px;border-radius:999px;font-size:1rem;cursor:pointer;font-family:Helvetica,Arial,sans-serif}
+form button:hover{background:var(--gold2)}
+.form-ok{display:none;background:var(--card);border:1px solid var(--gold);border-radius:14px;padding:24px;max-width:640px;margin:26px auto 0}
 @media(max-width:640px){.hero h1{font-size:2rem}.nav nav{display:none}}
 </style>
 </head>
@@ -253,6 +278,45 @@ footer .sig{color:var(--gold2);font-style:italic}
        l'émotion qu'on peut mettre en scène, sans engagement. Ou écrivez-moi sur Messenger.</p>
     <a class="btn" href="mailto:savardrjr@gmail.com?subject=L'Empire%20des%20%C3%A9motions%20—%20demande%20d'information">savardrjr@gmail.com</a>
     <a class="btn ghost" href="https://m.me/moleculeT9">Messenger</a>
+    <form id="demande" onsubmit="return envoyerDemande(event)">
+      <label for="f-nom">Votre nom</label>
+      <input id="f-nom" name="nom" required autocomplete="name">
+      <label for="f-commerce">Nom du commerce</label>
+      <input id="f-commerce" name="commerce" required>
+      <label for="f-secteur">Secteur</label>
+      <select id="f-secteur" name="secteur">
+        <option>Garage / pneus / services (Sécurité)</option>
+        <option>Restaurant / café / alimentation (Désir)</option>
+        <option>Beauté / spa / coiffure (Beauté)</option>
+        <option>Services à domicile (Sérénité)</option>
+        <option>Enfants / librairie / jouets (Imagination)</option>
+        <option>Coaching / formation / artisanat (Espoir)</option>
+        <option>Autre</option>
+      </select>
+      <label for="f-tel">Téléphone</label>
+      <input id="f-tel" name="telephone" type="tel" required autocomplete="tel">
+      <label for="f-courriel">Courriel</label>
+      <input id="f-courriel" name="courriel" type="email" required autocomplete="email">
+      <label for="f-forfait">Forfait envisagé</label>
+      <select id="f-forfait" name="forfait">
+        <option>Échantillon gratuit de 15 secondes</option>
+        <option>Capsule émotionnelle — 250 $</option>
+        <option>Série découverte — 750 $</option>
+        <option>Forfait mensuel — 500 $/mois</option>
+        <option>Forfait mensuel Plus — 950 $/mois</option>
+        <option>Jingle original — 350 $</option>
+        <option>Identité visuelle de base — 300 $</option>
+        <option>Je ne sais pas encore</option>
+      </select>
+      <label for="f-msg">Ce que vous vendez — et ce que vos clients devraient ressentir</label>
+      <textarea id="f-msg" name="message" rows="4"></textarea>
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit">Envoyer ma demande</button>
+    </form>
+    <div class="form-ok" id="form-ok">
+      <b>Merci !</b> Votre demande est envoyée. On vous revient rapidement avec l'émotion
+      qu'on peut mettre en scène pour votre commerce.
+    </div>
     <p class="note">Suivez le studio : <a href="https://www.facebook.com/share/19tA8EXsyt/">Facebook — Roger Savard / Sav'art</a> ·
        <a href="https://www.instagram.com/savartartistepeintre">Instagram — @savartartistepeintre</a> ·
        <a href="https://www.youtube.com/@savartastuces">YouTube — Sav'art, trucs et astuces peinture</a></p>
@@ -268,6 +332,30 @@ footer .sig{color:var(--gold2);font-style:italic}
 </footer>
 
 <script>
+function envoyerDemande(ev){
+  ev.preventDefault();
+  var f = document.getElementById('demande');
+  var data = {};
+  new FormData(f).forEach(function(v,k){ data[k]=v; });
+  data._subject = "Nouvelle demande — L'Empire des émotions";
+  data._template = "table";
+  data._captcha = "false";
+  fetch("https://formsubmit.co/ajax/savardrjr@gmail.com", {
+    method: "POST",
+    headers: {"Content-Type": "application/json", "Accept": "application/json"},
+    body: JSON.stringify(data)
+  }).then(function(r){
+    if(r.ok){
+      f.style.display = "none";
+      document.getElementById('form-ok').style.display = "block";
+    } else {
+      alert("L'envoi a échoué — écrivez-moi directement : savardrjr@gmail.com");
+    }
+  }).catch(function(){
+    alert("L'envoi a échoué — écrivez-moi directement : savardrjr@gmail.com");
+  });
+  return false;
+}
 function toggleCard(el){
   var was = el.classList.contains('active');
   document.querySelectorAll('.card').forEach(function(c){ c.classList.remove('active'); });

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'Empire des émotions — Roger Savard · Sav'art</title>
+<meta name="description" content="Je ne vends pas des vidéos. Je vends ce que vos clients ressentent. Capsules émotionnelles, séries et jingles pour les commerces du Québec, par Roger Savard, artiste peintre et créateur.">
+<style>
+:root{
+  --ink:#171310; --ink2:#221c16; --gold:#c9973f; --gold2:#e8c37a;
+  --cream:#f5efe4; --muted:#b8ab97; --card:#211a13; --line:#3a2f22;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+a{color:var(--gold2)}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:rgba(23,19,16,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);z-index:10}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+.logo{font-size:1.05rem;letter-spacing:.14em;color:var(--gold2);text-transform:uppercase}
+.nav nav a{color:var(--cream);text-decoration:none;margin-left:18px;font-size:.92rem}
+.nav nav a:hover{color:var(--gold2)}
+.hero{padding:74px 0 56px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#33270f 0%,var(--ink) 62%)}
+.hero .sur{letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-size:.8rem}
+.hero h1{font-size:2.7rem;line-height:1.15;margin:16px 0 8px;color:var(--cream)}
+.hero h1 em{color:var(--gold2);font-style:italic}
+.hero .accroche{font-size:1.35rem;font-style:italic;color:var(--gold2);margin:14px 0 6px}
+.hero p{color:var(--muted);max-width:640px;margin:10px auto 0}
+.btn{display:inline-block;margin-top:26px;background:var(--gold);color:#171310;font-weight:bold;
+  padding:13px 30px;border-radius:999px;text-decoration:none;font-family:Helvetica,Arial,sans-serif;font-size:1rem}
+.btn:hover{background:var(--gold2)}
+.btn.ghost{background:transparent;color:var(--gold2);border:1px solid var(--gold);margin-left:10px}
+section{padding:52px 0}
+h2{font-size:1.8rem;color:var(--gold2);margin-bottom:8px}
+h2+.intro{color:var(--muted);max-width:720px;margin-bottom:26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;cursor:pointer;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.card.active{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.card h3{color:var(--gold2);font-size:1.25rem;margin-bottom:6px}
+.card .vend{font-style:italic;color:var(--cream)}
+.card .qui{color:var(--muted);font-size:.92rem;margin-top:8px}
+.card .exemple{display:none;margin-top:12px;border-top:1px dashed var(--line);padding-top:10px;color:var(--cream);font-size:.95rem}
+.card.active .exemple{display:block}
+.prix{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.offre{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.offre.vedette{border-color:var(--gold)}
+.offre h3{color:var(--cream);font-size:1.15rem}
+.offre .montant{font-size:1.9rem;color:var(--gold2);margin:8px 0}
+.offre .montant small{font-size:.95rem;color:var(--muted)}
+.offre p{color:var(--muted);font-size:.95rem}
+.chiffres{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;text-align:center}
+.chiffre{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.chiffre b{display:block;font-size:1.8rem;color:var(--gold2)}
+.chiffre span{color:var(--muted);font-size:.9rem}
+.etapes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.etape{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.etape .num{font-size:1.6rem;color:var(--gold)}
+.etape h3{color:var(--cream);margin:6px 0}
+.etape p{color:var(--muted);font-size:.95rem}
+.note{color:var(--muted);font-size:.9rem;margin-top:18px}
+footer{border-top:1px solid var(--line);padding:34px 0 44px;color:var(--muted);font-size:.92rem}
+footer .sig{color:var(--gold2);font-style:italic}
+@media(max-width:640px){.hero h1{font-size:2rem}.nav nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="logo">L'Empire des émotions</div>
+    <nav>
+      <a href="#univers">Les univers</a>
+      <a href="#forfaits">Forfaits</a>
+      <a href="#preuves">Preuves</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="sur">Roger Savard · Sav'art · Québec</div>
+    <h1>Le véritable produit,<br>c'est <em>l'émotion</em>.</h1>
+    <p class="accroche">« Je ne vends pas des vidéos. Je vends ce que vos clients ressentent. »</p>
+    <p>Les gens n'achètent pas un produit : ils achètent la confiance, le plaisir, la tranquillité,
+       l'émerveillement qu'il leur procure. Je crée des capsules vidéo et des jingles qui mettent
+       cette émotion en scène — pour les commerces qui veulent être ressentis, pas seulement vus.</p>
+    <a class="btn" href="#forfaits">Voir les forfaits</a>
+    <a class="btn ghost" href="#contact">Me contacter</a>
+  </div>
+</div>
+
+<section id="univers">
+  <div class="wrap">
+    <h2>Six univers, six émotions qui font acheter</h2>
+    <p class="intro">Chaque commerce vend une émotion avant de vendre un produit. Touchez un univers
+       pour voir ce qu'une capsule peut raconter pour ce type d'entreprise.</p>
+    <div class="grid">
+      <div class="card" onclick="toggleCard(this)">
+        <h3>🍽️ Désir</h3>
+        <div class="vend">Le plaisir d'offrir — et de se faire plaisir.</div>
+        <div class="qui">Restaurants, cafés, fleuristes, bijouteries, chocolateries.</div>
+        <div class="exemple">Exemple : la première bouchée filmée comme un moment de fête — le client ne réserve pas une table, il s'offre une soirée.</div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <h3>✨ Beauté</h3>
+        <div class="vend">Le plaisir de se sentir beau, de se sentir belle.</div>
+        <div class="qui">Salons de coiffure, spas, esthétique, parfumeries.</div>
+        <div class="exemple">Exemple : le geste précis, la lumière, le sourire en sortant — la capsule vend le miroir de la fin, pas le service.</div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <h3>🕊️ Sérénité</h3>
+        <div class="vend">Du temps — et de la tranquillité.</div>
+        <div class="qui">Services à domicile, déménageurs, organisation, services aux familles et aux aînés.</div>
+        <div class="exemple">Exemple : une maison qui redevient calme, une famille qui respire — le parent n'achète pas un service, il achète sa soirée.</div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <h3>🌈 Imagination</h3>
+        <div class="vend">Un univers pour les enfants, la fierté pour les parents.</div>
+        <div class="qui">Librairies, boutiques de jouets, écoles d'art et de musique.</div>
+        <div class="exemple">Exemple : un livre qui s'ouvre comme une porte — l'enfant entre dans l'histoire avant même d'entrer dans la boutique.</div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <h3>🛡️ Sécurité</h3>
+        <div class="vend">La tranquillité d'esprit.</div>
+        <div class="qui">Garages et pneus, serruriers, alarmes, courtiers d'assurance.</div>
+        <div class="exemple">Exemple : partir sur la route l'esprit libre parce que quelqu'un de fiable a tout vérifié — c'est exactement ce que racontent les capsules de L'Entrepôt du pneu Québec, un client réel.</div>
+      </div>
+      <div class="card" onclick="toggleCard(this)">
+        <h3>🌱 Espoir</h3>
+        <div class="vend">Des possibilités, une perspective meilleure.</div>
+        <div class="qui">Coachs, formateurs, artisans, artistes, organismes d'entraide.</div>
+        <div class="exemple">Exemple : le premier pas d'un projet, montré comme une naissance — on ne vend pas une formation, on vend le départ.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="forfaits" style="background:var(--ink2)">
+  <div class="wrap">
+    <h2>Les forfaits — simples, fixes, sans surprise</h2>
+    <p class="intro">Des produits finis, produits par un studio qui publie déjà chaque jour.
+       Vous choisissez, j'approuve avec vous, on livre dans la semaine.</p>
+    <div class="prix">
+      <div class="offre">
+        <h3>Capsule émotionnelle</h3>
+        <div class="montant">250 $</div>
+        <p>Une vidéo verticale de 30 à 60 secondes : votre produit montré par l'émotion qu'il procure,
+           voix et musique comprises, prête pour Facebook, Instagram et TikTok.</p>
+      </div>
+      <div class="offre vedette">
+        <h3>Série découverte</h3>
+        <div class="montant">750 $</div>
+        <p>Trois capsules échelonnées sur une semaine — une histoire qui se suit et qui installe
+           votre commerce dans l'esprit de vos clients.</p>
+      </div>
+      <div class="offre">
+        <h3>Forfait mensuel</h3>
+        <div class="montant">500 $<small> /mois</small></div>
+        <p>Quatre capsules par mois et leurs stories : une présence régulière, sans que vous ayez
+           à y penser. Places limitées — trois clients à la fois, pour garder la qualité.</p>
+      </div>
+      <div class="offre">
+        <h3>Jingle original</h3>
+        <div class="montant">350 $</div>
+        <p>Une musique originale signée Regor Dravas (DJ Master Groove) — la signature sonore
+           qu'on retient et qu'on fredonne. Droits d'utilisation inclus.</p>
+      </div>
+      <div class="offre">
+        <h3>Identité visuelle de base</h3>
+        <div class="montant">300 $</div>
+        <p>Logo simple, carte de fin vidéo et habillage de vos pages — une image nette et
+           reconnaissable partout.</p>
+      </div>
+      <div class="offre">
+        <h3>Visibilité sur mes chaînes</h3>
+        <div class="montant">Sur demande</div>
+        <p>En plus de vos pages : votre produit démontré devant mon audience de peintres et de
+           passionnés, au Québec et en France. Tarifs du kit de commandite sur demande.</p>
+      </div>
+    </div>
+    <p class="note">Tarifs de lancement. Chaque contenu commandité est identifié « Partenariat rémunéré »,
+       selon les règles des plateformes. Aucune publicité n'est placée sur les chaînes pour enfants.</p>
+  </div>
+</section>
+
+<section id="preuves">
+  <div class="wrap">
+    <h2>Les preuves, pas les promesses</h2>
+    <p class="intro">Un commerce réel déjà servi comme un client — L'Entrepôt du pneu Québec
+       (capsules de recrutement, de pose de pneus et d'hiver, page gérée) — et une audience
+       qui regarde chaque jour :</p>
+    <div class="chiffres">
+      <div class="chiffre"><b>23 190</b><span>abonnés Facebook (page Sav'art)</span></div>
+      <div class="chiffre"><b>13 241</b><span>abonnés Instagram (@savartartistepeintre)</span></div>
+      <div class="chiffre"><b>2,4 M</b><span>de vues Facebook en 28 jours</span></div>
+      <div class="chiffre"><b>500 000 +</b><span>vues pour une seule capsule</span></div>
+    </div>
+    <p class="note">Relevés officiels des plateformes, novembre 2026. Production : 3 capsules par jour,
+       7 jours sur 7, sur Facebook, Instagram et YouTube — une régularité qu'aucun petit commerce
+       ne peut s'offrir autrement.</p>
+  </div>
+</section>
+
+<section style="background:var(--ink2)">
+  <div class="wrap">
+    <h2>Comment ça marche</h2>
+    <p class="intro">Simple, du premier message à la publication.</p>
+    <div class="etapes">
+      <div class="etape"><div class="num">1</div><h3>On choisit l'émotion</h3>
+        <p>Vous me dites ce que vous vendez ; ensemble, on nomme ce que vos clients veulent ressentir.</p></div>
+      <div class="etape"><div class="num">2</div><h3>Je produis</h3>
+        <p>Mon studio crée la capsule ou le jingle — peinture, musique, vidéo et intelligence artificielle au service de votre histoire. Vous approuvez avant publication.</p></div>
+      <div class="etape"><div class="num">3</div><h3>Vos clients ressentent</h3>
+        <p>Vous publiez sur vos pages (ou je vous prépare tout) — et votre produit devient un moment, pas une annonce.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Parlons de votre émotion</h2>
+    <p class="intro">Écrivez-moi en me disant simplement ce que vous vendez — je vous reviens avec
+       l'émotion qu'on peut mettre en scène, sans engagement.</p>
+    <a class="btn" href="mailto:savardrjr@gmail.com?subject=L'Empire%20des%20%C3%A9motions%20—%20demande%20d'information">savardrjr@gmail.com</a>
+    <p class="note">Suivez le studio : <a href="https://www.facebook.com/share/19tA8EXsyt/">Facebook — Roger Savard / Sav'art</a> ·
+       <a href="https://www.instagram.com/savartartistepeintre">Instagram — @savartartistepeintre</a> ·
+       <a href="https://www.youtube.com/@savartastuces">YouTube — Sav'art, trucs et astuces peinture</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><span class="sig">Roger Savard</span> — artiste peintre et créateur, Québec (Canada).<br>
+    « Québécois de père en fils depuis 1663 »</p>
+    <p style="margin-top:10px">© 2026 Roger Savard · Sav'art — L'Empire des émotions. Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script>
+function toggleCard(el){
+  var was = el.classList.contains('active');
+  document.querySelectorAll('.card').forEach(function(c){ c.classList.remove('active'); });
+  if(!was){ el.classList.add('active'); }
+}
+</script>
+</body>
+</html>

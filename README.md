@@ -8,4 +8,7 @@ capsules vidéo émotionnelles, séries, forfaits mensuels et jingles pour les c
 - Forfaits de lancement : capsule 250 $, série découverte 750 $, forfait mensuel 500 $/mois, jingle 350 $, identité visuelle 300 $.
 - Plan complet : `../plan-direction-a-adaptee.pdf` (dossier local, hors dépôt).
 
-Site statique : `index.html` + `og-image.png` (aperçu de partage), aucune dépendance.
+Site statique : `index.html`, `sitemap.xml`, `robots.txt`, aucune dépendance.
+L'aperçu de partage (Open Graph) utilise la vignette YouTube de la capsule intégrée.
+Le formulaire de demande envoie les demandes par courriel via FormSubmit (service gratuit,
+sans compte) vers savardrjr@gmail.com — surveillé par le clone dédié.

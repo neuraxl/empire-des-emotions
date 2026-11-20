@@ -99,6 +99,10 @@ form button{margin-top:18px;width:100%;background:var(--gold);color:#171310;font
   padding:13px;border-radius:999px;font-size:1rem;cursor:pointer;font-family:Helvetica,Arial,sans-serif}
 form button:hover{background:var(--gold2)}
 .form-ok{display:none;background:var(--card);border:1px solid var(--gold);border-radius:14px;padding:24px;max-width:640px;margin:26px auto 0}
+.promo{border:2px solid var(--gold);border-radius:14px;padding:26px;background:linear-gradient(180deg,rgba(212,175,55,.08),transparent);text-align:center;max-width:760px;margin:0 auto}
+.promo h3{color:var(--gold2);font-size:1.4rem;margin:0 0 10px}
+.promo p{color:var(--cream);margin:8px 0}
+.promo .cond{color:var(--muted);font-size:.82rem;margin-top:14px;line-height:1.5}
 @media(max-width:640px){.hero h1{font-size:2rem}.nav nav{display:none}}
 </style>
 </head>
@@ -109,6 +113,7 @@ form button:hover{background:var(--gold2)}
     <nav>
       <a href="#univers">Les univers</a>
       <a href="#forfaits">Forfaits</a>
+      <a href="#parrainage">Parrainage</a>
       <a href="#preuves">Preuves</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -225,6 +230,12 @@ form button:hover{background:var(--gold2)}
            reconnaissable partout.</p>
       </div>
       <div class="offre">
+        <h3>Droits d'utilisation complets + signature retirée</h3>
+        <div class="montant">+50 $<small> /capsule</small></div>
+        <p>Chaque capsule est livrée signée à la fin, comme une toile. Pour 50 $ de plus par capsule,
+           vous obtenez la cession complète des droits d'utilisation et le fichier sans la signature.</p>
+      </div>
+      <div class="offre">
         <h3>Visibilité sur mes chaînes</h3>
         <div class="montant">Sur demande</div>
         <p>En plus de vos pages : votre produit démontré devant mon audience de peintres et de
@@ -235,6 +246,23 @@ form button:hover{background:var(--gold2)}
        selon les règles des plateformes. Aucune publicité n'est placée sur les chaînes pour enfants.</p>
     <p class="note"><b>Paiement simple :</b> virement Interac ou carte de crédit — les détails accompagnent la facture.
        Acompte de 50 % à la commande, solde à la livraison.</p>
+  </div>
+</section>
+
+<section id="parrainage">
+  <div class="wrap">
+    <div class="promo">
+      <h3>🤝 Parrainez deux commerces — votre forfait vous est remboursé</h3>
+      <p>Vous aimez le résultat ? Recommandez L'Empire des émotions à deux commerces de votre réseau.
+         Quand vos deux filleuls ont acheté un forfait <b>égal ou supérieur</b> au vôtre et payé leur facture,
+         le montant de votre forfait vous revient en <b>crédit applicable à votre renouvellement</b>.</p>
+      <p>Chaque client reçoit un <b>code de parrainage unique</b> : vos filleuls l'entrent dans le formulaire
+         de contact ci-dessous, et le suivi se fait automatiquement.</p>
+      <p class="cond">Conditions : forfaits admissibles — Série découverte 750 $, Forfait mensuel 500 $/mois,
+         Forfait mensuel Plus 950 $/mois. Les achats des filleuls doivent être d'un niveau égal ou supérieur au forfait du parrain.
+         Un remboursement par client par période de 12 mois. Crédit applicable au renouvellement du forfait, valide 12 mois.
+         Taxes en sus. L'Empire des émotions peut modifier ou terminer la promotion en tout temps pour les parrainages non complétés.</p>
+    </div>
   </div>
 </section>
 
@@ -308,6 +336,8 @@ form button:hover{background:var(--gold2)}
         <option>Identité visuelle de base — 300 $</option>
         <option>Je ne sais pas encore</option>
       </select>
+      <label for="f-code">Code de parrainage (si un commerce vous a recommandé)</label>
+      <input id="f-code" name="code_parrainage" placeholder="Ex. EMPIRE-4821">
       <label for="f-msg">Ce que vous vendez — et ce que vos clients devraient ressentir</label>
       <textarea id="f-msg" name="message" rows="4"></textarea>
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">

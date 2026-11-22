@@ -5,7 +5,7 @@ capsules vidéo émotionnelles, séries, forfaits mensuels et jingles pour les c
 
 - Accroche : « Je ne vends pas des vidéos. Je vends ce que vos clients ressentent. »
 - Six univers : Désir, Beauté, Sérénité, Imagination, Sécurité, Espoir.
-- Forfaits de lancement : capsule 250 $, série découverte 750 $, forfait mensuel 500 $/mois, jingle 350 $, identité visuelle 300 $.
+- Forfaits de lancement : capsule 125 $, série découverte 375 $, forfait mensuel 250 $/mois, jingle 175 $, identité visuelle 150 $.
 - Plan complet : `../plan-direction-a-adaptee.pdf` (dossier local, hors dépôt).
 
 Site statique : `index.html`, `sitemap.xml`, `robots.txt`, aucune dépendance.
